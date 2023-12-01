@@ -54,7 +54,6 @@ public class Minotaur : MonoBehaviour {
         StopCoroutine(coroutine);
         anim.SetBool("walk", false);
         anim.SetTrigger("charge");
-        isCharging = true;
         updateRotation = true;
         agent.enabled = false;
         StartCoroutine(LookAtPlayer());
@@ -68,11 +67,12 @@ public class Minotaur : MonoBehaviour {
     }
 
     void Run() {
+        isCharging = true;
         updateRotation = false;
         rb.AddForce(new Vector3(player.transform.position.x - transform.position.x, 0f, player.transform.position.z - transform.position.z).normalized * chargeSpeed, ForceMode.Impulse);
     }
 
-    void OnTriggerEnter(Collider other) {
+    void OnTriggerStay(Collider other) {
         if(other.gameObject.tag == "Bullet") {
             return;
         }

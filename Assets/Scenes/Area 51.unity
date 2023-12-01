@@ -2155,51 +2155,73 @@ MonoBehaviour:
     m_SceneName: Start
   bossScenes:
   - m_SceneAsset: {fileID: 102900000, guid: bd9d914043b58c24cb7e10bbcff68df1, type: 3}
-    m_SceneName: Boss
+    m_SceneName: Minotaur_1
+  - m_SceneAsset: {fileID: 102900000, guid: bc52e570b04842f4390f143df4d4cd61, type: 3}
+    m_SceneName: Minotaur_2
+  - m_SceneAsset: {fileID: 102900000, guid: 00af4ddada7dde042bc18a1c821224c3, type: 3}
+    m_SceneName: Minotaur_3
   treasureScenes:
   - m_SceneAsset: {fileID: 102900000, guid: ea91be94636458f4cad26882aa10461d, type: 3}
-    m_SceneName: Treasure
+    m_SceneName: Treasure 1
+  - m_SceneAsset: {fileID: 102900000, guid: 1f48ec2d4599b6b45b9dbe965cf5047f, type: 3}
+    m_SceneName: Treasure 2
+  - m_SceneAsset: {fileID: 102900000, guid: 1b91e1c59ce5228489df1b8c503e8d49, type: 3}
+    m_SceneName: Treasure 3
   storeScenes:
   - m_SceneAsset: {fileID: 102900000, guid: 2091c08b1e13eef4eac95fc961407001, type: 3}
-    m_SceneName: Store
+    m_SceneName: Store 1
+  - m_SceneAsset: {fileID: 102900000, guid: e42defe97a7ffc141b5abcf11a18d92d, type: 3}
+    m_SceneName: Store 2
+  - m_SceneAsset: {fileID: 102900000, guid: d75571fa84420c342bd8f59e432466fe, type: 3}
+    m_SceneName: Store 3
   secretScenes:
   - m_SceneAsset: {fileID: 102900000, guid: 86007e16e285dcf46b484886ed7250fe, type: 3}
-    m_SceneName: Secret
+    m_SceneName: Secret 1
+  - m_SceneAsset: {fileID: 102900000, guid: 7497fbfcb3ada834b83ea3896630b117, type: 3}
+    m_SceneName: Secret 2
+  - m_SceneAsset: {fileID: 102900000, guid: c0f50581899bd0e40be106f881bff681, type: 3}
+    m_SceneName: Secret 3
+  - m_SceneAsset: {fileID: 102900000, guid: 8a271afb69fe67f4894567ed7666affe, type: 3}
+    m_SceneName: Secret 4
   easyRoomScenes:
+  - m_SceneAsset: {fileID: 102900000, guid: 60549e5f06a618944b538df078d812ed, type: 3}
+    m_SceneName: EasyRoom 1
   - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
-  - m_SceneAsset: {fileID: 102900000, guid: 8d983f9b1d543224e8f05ca5d160d9ac, type: 3}
-    m_SceneName: BasicRoom
+    m_SceneName: EasyRoom 2
+  - m_SceneAsset: {fileID: 102900000, guid: bc8b0233343daa0468536ccb418ca436, type: 3}
+    m_SceneName: EasyRoom 3
+  - m_SceneAsset: {fileID: 102900000, guid: 7e6b8a0127afcdf429ad10be6195ad36, type: 3}
+    m_SceneName: EasyRoom 4
+  - m_SceneAsset: {fileID: 102900000, guid: 7416d660f6571614883dfe49b87e1eb9, type: 3}
+    m_SceneName: EasyRoom 5
+  - m_SceneAsset: {fileID: 102900000, guid: 9f2347f8fdf14f94f970584a88e9a082, type: 3}
+    m_SceneName: EasyRoom 6
+  - m_SceneAsset: {fileID: 102900000, guid: 29c4a3d60dc1fc549a0a0f17b6554744, type: 3}
+    m_SceneName: EasyRoom 7
+  - m_SceneAsset: {fileID: 102900000, guid: a73ad4362f7997c44895f27f4567c61a, type: 3}
+    m_SceneName: EasyRoom 8
+  - m_SceneAsset: {fileID: 102900000, guid: fb71fbdf8ff812b4b9514f403620efd4, type: 3}
+    m_SceneName: EasyRoom 9
+  - m_SceneAsset: {fileID: 102900000, guid: 795456a0c97a83f4f83c82e942242476, type: 3}
+    m_SceneName: EasyRoom 10
+  - m_SceneAsset: {fileID: 102900000, guid: e42648532e497b34fa950c3723e9547e, type: 3}
+    m_SceneName: EasyRoom 11
+  - m_SceneAsset: {fileID: 102900000, guid: f76cd488aecac814da4ce13cbbf7353b, type: 3}
+    m_SceneName: EasyRoom 12
+  - m_SceneAsset: {fileID: 102900000, guid: e8a347506807296418faa7577fcfeea6, type: 3}
+    m_SceneName: EasyRoom 13
+  - m_SceneAsset: {fileID: 102900000, guid: 2f90d2561390ab0418705188749a1ea9, type: 3}
+    m_SceneName: EasyRoom 14
+  - m_SceneAsset: {fileID: 102900000, guid: 34bf03f1c9c6ad84788cb2ced6343983, type: 3}
+    m_SceneName: EasyRoom 15
+  - m_SceneAsset: {fileID: 102900000, guid: 5c2bb5f37b9b46d408fd39a2c1fd7f9b, type: 3}
+    m_SceneName: EasyRoom 16
+  - m_SceneAsset: {fileID: 102900000, guid: 154e5799f45234c4c8945f10e786c2af, type: 3}
+    m_SceneName: EasyRoom 17
   normalRoomScenes: []
   hardRoomScenes: []
   specialRoomScenes: []
-  roomsToGenerate: 7
+  roomsToGenerate: 12
   normalRooms: 0
   hardRooms: 0
   specialRooms: 0

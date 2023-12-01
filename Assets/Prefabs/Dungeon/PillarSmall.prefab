@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5828163294875178271}
   - component: {fileID: 8464947928936066824}
   - component: {fileID: 23602299949334982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4613323889150204249}
   - component: {fileID: 4620888681114311774}
   - component: {fileID: 4165892606051276808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 510773608865312006}
   - component: {fileID: 3872285135090386049}
   - component: {fileID: 5352345106966130907}
+  - component: {fileID: 4275831643915410167}
   m_Layer: 0
   m_Name: PillarSmall
   m_TagString: Destructable
@@ -220,7 +221,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6, y: 4, z: 2.6}
+  m_Size: {x: 2.7, y: 4, z: 2.7}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &5352345106966130907
 MonoBehaviour:
@@ -238,3 +239,19 @@ MonoBehaviour:
   particle: {fileID: 6359854855183985272, guid: cbe0c59280f061f4bbe22a3322a54450, type: 3}
   onlyBombCanDamage: 1
   health: 0
+--- !u!208 &4275831643915410167
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070665971360709893}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.85, y: 1.85, z: 1.85}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2, z: 0}
+  m_TimeToStationary: 0.5

@@ -15,7 +15,6 @@ public class RoomController : MonoBehaviour {
     public static RoomController instance;
 
     [SerializeField] NavMeshSurface surface;
-    [SerializeField] Slider bossHealth;
 
     [HideInInspector] public Room currentRoom;
 

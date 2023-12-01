@@ -25,16 +25,17 @@ public class BossRoom : Room {
     }
 
     IEnumerator UpdateBossHealthSlider() {
+        yield return null;
         bool bossAlive = true;
         float maxHp = GetEnemiesMaxHealth();
-        float lastFramecurrHp = 0f;
+        float lastFrameCurrHp = GetEnemiesCurrentHealth();
         while(bossAlive) {
             float currHp = GetEnemiesCurrentHealth();
-            if(currHp != lastFramecurrHp) {
+            if(currHp != lastFrameCurrHp) {
                 if(currHp <= 0f) {
                     bossAlive = false;
                 }
-                lastFramecurrHp = currHp;
+                lastFrameCurrHp = currHp;
                 BossHealthUIController.instance.UpdateBossHealth(currHp / maxHp);
             }
             yield return null;
