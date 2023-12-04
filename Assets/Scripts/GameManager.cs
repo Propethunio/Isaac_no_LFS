@@ -1,11 +1,16 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
     [SerializeField] float onRoomEnterFightDelay = .2f;
+    [SerializeField] TMP_Text endGameText;
+    [SerializeField] GameObject endGamePanel;
+    [SerializeField] SceneField mainMenuScene;
 
     GameObject player;
 
@@ -28,5 +33,36 @@ public class GameManager : MonoBehaviour {
         yield return StartCoroutine(CameraController.instance.UpdatePos(room));
         yield return StartCoroutine(RoomController.instance.PlayerEnterDoor(room, onRoomEnterFightDelay));
         input.EnablePlayerInput();
+    }
+
+    public void TeleportPlayer(Vector3 pos) {
+        player.GetComponent<PlayerInput>().DisablePlayerInput();
+        player.GetComponent<PlayerMovement>().TweenToPosition(pos);
+    }
+
+    public void StartGame() {
+        player.GetComponent<PlayerInput>().EnablePlayerInput();
+        SoundManager.instance.ChangeMusic(SoundManager.instance.gameMusic);
+    }
+
+    public void PlayerWin() {
+        endGameText.text = "You Win!";
+        EndGame();
+    }
+
+    public void PlayerDied() {
+        endGameText.text = "You Lose!";
+        EndGame();
+    }
+
+    void EndGame() {
+        Time.timeScale = 0;
+        StatisticManager.instance.SetStats();
+        endGamePanel.SetActive(true);
+        SoundManager.instance.ChangeMusic(SoundManager.instance.endMusic);
+    }
+
+    public void BackToMenu() {
+        SceneManager.LoadScene(mainMenuScene);
     }
 }

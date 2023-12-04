@@ -85,6 +85,6 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Die() {
-
+        GameManager.instance.PlayerDied();
     }
 }

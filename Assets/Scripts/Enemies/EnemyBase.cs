@@ -48,6 +48,7 @@ public class EnemyBase : MonoBehaviour {
         if(!gameObject.scene.isLoaded) {
             return;
         }
+        StatisticManager.instance.enemiesCount++;
         RoomController.instance.RemoveEnemyFromList(this);
     }
 }

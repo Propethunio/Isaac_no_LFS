@@ -12,12 +12,13 @@ public class LoadingManager : MonoBehaviour {
     }
 
     IEnumerator LoadGame() {
-        int roomsToGenerate = DungeonDataGenerator.Instance.roomsToGenerate;
+        int roomsToGenerate = DungeonDataGenerator.instance.roomsToGenerate;
         while (RoomController.instance.currentRoom == null) {
             float loadingProgress = RoomController.instance.loadedRooms.Count / (float)roomsToGenerate;
             loadingSlider.value = loadingProgress;
             yield return null;
         }
         loadingPanel.SetActive(false);
+        GameManager.instance.StartGame();
     }
 }

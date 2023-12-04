@@ -1,6 +1,15 @@
 using System.Collections;
+using UnityEngine;
 
 public class BossRoom : Room {
+
+    [SerializeField] GameObject teleport;
+    [SerializeField] Transform rewardPosition;
+
+    public override void Start() {
+        base.Start();
+        teleport.SetActive(false);
+    }
 
     public override void StartFight() {
         base.StartFight();
@@ -41,5 +50,12 @@ public class BossRoom : Room {
             yield return null;
         }
         BossHealthUIController.instance.EndBossFight();
+    }
+
+    public override void SpawnReward() {
+        GameObject reward = RewardController.instance.CheckForRoomReward(roomRewardType);
+        Instantiate(reward, rewardPosition);
+        teleport.SetActive(true);
+        teleport.GetComponent<Teleport>().StartCollide();
     }
 }

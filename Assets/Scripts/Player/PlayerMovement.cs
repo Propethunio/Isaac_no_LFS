@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -51,12 +53,25 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void HandleMovement() {
-        controller.Move(moveDir * stats.moveSpeed * Time.fixedDeltaTime);
+        if(controller.enabled) {
+            controller.Move(moveDir * stats.moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     public void MoveToPosition(Vector3 pos) {
         controller.enabled = false;
         transform.position = pos;
+        controller.enabled = true;
+    }
+
+    public void TweenToPosition(Vector3 pos) {
+        controller.enabled = false;
+        StartCoroutine(TweenTo(pos));
+    }
+
+    IEnumerator TweenTo(Vector3 pos) {
+        transform.DOMove(new Vector3(pos.x, 0, pos.z), .25f);
+        yield return new WaitForSeconds(.25f);
         controller.enabled = true;
     }
 }

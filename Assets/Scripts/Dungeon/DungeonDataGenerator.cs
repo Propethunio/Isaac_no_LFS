@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DungeonDataGenerator : MonoBehaviour {
 
-    public static DungeonDataGenerator Instance;
+    public static DungeonDataGenerator instance;
 
     [SerializeField] SceneField startScene;
     [SerializeField] List<SceneField> bossScenes;
@@ -25,7 +25,7 @@ public class DungeonDataGenerator : MonoBehaviour {
     int failedGenerations;
 
     void Awake() {
-        Instance = this;
+        instance = this;
     }
 
     void Start() {

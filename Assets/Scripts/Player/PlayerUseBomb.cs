@@ -19,6 +19,7 @@ public class PlayerUseBomb : MonoBehaviour {
 
     void UseBomb() {
         stats.bombsAmount--;
+        StatisticManager.instance.bombsCount++;
         ItemsUIController.instance.SetBombs(stats.bombsAmount);
         GameObject bomb = Instantiate(bombPrefab, transform.position, Quaternion.Euler(0, 0, 0));
         bomb.GetComponent<Bomb>().damage = stats.moveSpeed * stats.bombDamageMultiplier;

@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Secret/Secret 1.unity
     guid: 86007e16e285dcf46b484886ed7250fe
   - enabled: 1
-    path: Assets/Scenes/Boss/Minotaur_1.unity
+    path: Assets/Scenes/Boss/Minotaur 1.unity
     guid: bd9d914043b58c24cb7e10bbcff68df1
   - enabled: 1
     path: Assets/Scenes/EasyRoom/EasyRoom 2.unity
@@ -90,10 +90,10 @@ EditorBuildSettings:
     path: Assets/Scenes/EasyRoom/EasyRoom 17.unity
     guid: 154e5799f45234c4c8945f10e786c2af
   - enabled: 1
-    path: Assets/Scenes/Boss/Minotaur_2.unity
+    path: Assets/Scenes/Boss/Minotaur 2.unity
     guid: bc52e570b04842f4390f143df4d4cd61
   - enabled: 1
-    path: Assets/Scenes/Boss/Minotaur_3.unity
+    path: Assets/Scenes/Boss/Minotaur 3.unity
     guid: 00af4ddada7dde042bc18a1c821224c3
   - enabled: 1
     path: Assets/Scenes/Secret/Secret 2.unity

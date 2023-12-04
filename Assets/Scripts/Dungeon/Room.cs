@@ -15,7 +15,7 @@ public class Room : MonoBehaviour {
 
     List<Door> doorsList;
 
-    void Start() {
+    public virtual void Start() {
         RoomController.instance.RegisterRoom(this);
         doorsList = new List<Door>(GetComponentsInChildren<Door>());
         enemiesList = new List<EnemyBase>(GetComponentsInChildren<EnemyBase>(true));
@@ -46,7 +46,7 @@ public class Room : MonoBehaviour {
         }
     }
 
-    void SpawnReward() {
+    public virtual void SpawnReward() {
         GameObject reward = RewardController.instance.CheckForRoomReward(roomRewardType);
         if(reward != null) {
             Instantiate(reward, new Vector3(transform.position.x, .25f, transform.position.z), reward.transform.rotation);

@@ -6,7 +6,6 @@ public class PlayerInput : MonoBehaviour {
 
     void Awake() {
         playerInputActions = new PlayerInputActions();
-        EnablePlayerInput();
     }
 
     public Vector2 GetMovementVectorNormalized() {

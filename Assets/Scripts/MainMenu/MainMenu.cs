@@ -6,6 +6,10 @@ public class MainMenu : MonoBehaviour {
 
     [SerializeField] SceneField gameScene;
 
+    void Start() {
+        SoundManager.instance.ChangeMusic(SoundManager.instance.mainMenuMusic);
+    }
+
     public void Play() {
         StartCoroutine(LoadGame());
     }

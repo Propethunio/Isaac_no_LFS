@@ -15,6 +15,7 @@ public class StoreItem : MonoBehaviour {
                 playerStats.coinsAmount -= cost;
                 item.UseItemOnPlayer(other.gameObject);
                 ItemsUIController.instance.SetCoins(playerStats.coinsAmount);
+                StatisticManager.instance.coinsCount += cost;
                 Destroy(gameObject);
             }
         }
