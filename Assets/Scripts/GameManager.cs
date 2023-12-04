@@ -1,9 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class GameController : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
-    public static GameController instance;
+    public static GameManager instance;
 
     [SerializeField] float onRoomEnterFightDelay = .2f;
 

@@ -10,7 +10,7 @@ public class TrollBomb : Bomb {
         base.Start();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
-        player = GameController.instance.GetPlayer();
+        player = GameManager.instance.GetPlayer();
     }
 
     void Update() {

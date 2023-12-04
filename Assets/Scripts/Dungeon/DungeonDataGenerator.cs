@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DungeonDataGenerator : MonoBehaviour {
 
+    public static DungeonDataGenerator Instance;
+
     [SerializeField] SceneField startScene;
     [SerializeField] List<SceneField> bossScenes;
     [SerializeField] List<SceneField> treasureScenes;
@@ -14,11 +16,17 @@ public class DungeonDataGenerator : MonoBehaviour {
     [SerializeField] List<SceneField> hardRoomScenes;
     [SerializeField] List<SceneField> specialRoomScenes;
 
-    [SerializeField] int roomsToGenerate = 12, normalRooms, hardRooms, specialRooms;
+    [SerializeField] int normalRooms, hardRooms, specialRooms;
+
+    public int roomsToGenerate = 12;
 
     List<Vector2Int> dungeonRoomsList = new List<Vector2Int>(), potentialRoomsList = new List<Vector2Int>(), specialRoomsList = new List<Vector2Int>();
     Vector2Int bossRoom, storeRoom, treasureRoom, secretRoom;
     int failedGenerations;
+
+    void Awake() {
+        Instance = this;
+    }
 
     void Start() {
         GenerateDungeonData();

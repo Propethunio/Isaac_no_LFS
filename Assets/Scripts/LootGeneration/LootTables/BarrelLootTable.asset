@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rewardList:
   - itemPrefab: {fileID: 0}
-    weight: 350
+    weight: 180
   - itemPrefab: {fileID: 7310961426582006884, guid: 1decc2971888da540b69d668bfd6485b, type: 3}
     weight: 3.5
   - itemPrefab: {fileID: 2076911912446254314, guid: a1898985b3fad5d47bac7c1f8f6dcde8, type: 3}

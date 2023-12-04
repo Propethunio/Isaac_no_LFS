@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8079620798448660608}
   - component: {fileID: 3519615827786761793}
   - component: {fileID: -4172634944639858587}
+  - component: {fileID: 1398858621229756681}
   m_Layer: 3
   m_Name: SpeedUp 1
   m_TagString: Item
@@ -71,6 +72,18 @@ MonoBehaviour:
   changeAmount: 1.1
   minStatAmount: 5.5
   maxStatAmount: 12.5
+--- !u!114 &1398858621229756681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310961426582006884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820475ad21ea6c94eb1b5b54574f355e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8740392485857851198
 PrefabInstance:
   m_ObjectHideFlags: 0

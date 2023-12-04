@@ -10,6 +10,5 @@ public class BasePowerUp : BaseItem {
 
     public override void UseItemOnPlayer(GameObject player) {
         Destroy(gameObject);
-        SoundManager.instance.PlaySound(SoundManager.instance.powerUp);
     }
 }

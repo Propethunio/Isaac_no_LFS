@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour {
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        player = GameController.instance.GetPlayer();
+        player = GameManager.instance.GetPlayer();
         agent.updateRotation = false;
         agent.enabled = true;
     }

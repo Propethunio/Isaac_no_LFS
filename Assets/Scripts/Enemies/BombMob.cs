@@ -9,7 +9,7 @@ public class BombMob : MonoBehaviour {
     GameObject player;
 
     void Start() {
-        player = GameController.instance.GetPlayer();
+        player = GameManager.instance.GetPlayer();
     }
 
     void OnTriggerEnter(Collider other) {

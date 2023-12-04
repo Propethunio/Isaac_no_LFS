@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8079620798448660608}
   - component: {fileID: 3519615827786761793}
   - component: {fileID: 7992615854441895300}
+  - component: {fileID: 5391895521350922244}
   m_Layer: 3
   m_Name: DamageUp 2
   m_TagString: Item
@@ -71,6 +72,18 @@ MonoBehaviour:
   changeAmount: 0.7
   minStatAmount: 1
   maxStatAmount: 10
+--- !u!114 &5391895521350922244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310961426582006884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820475ad21ea6c94eb1b5b54574f355e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8740392485857851198
 PrefabInstance:
   m_ObjectHideFlags: 0

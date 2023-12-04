@@ -42,6 +42,9 @@ public class Chest : MonoBehaviour {
         rewardPrefabs.ForEach(prefab => {
             GameObject go = Instantiate(prefab, new Vector3(transform.position.x, .25f, transform.position.z), prefab.transform.rotation);
             Vector2 point = Random.insideUnitCircle.normalized * 2;
+            while(Physics.CheckSphere(new Vector3(transform.position.x + point.x, .25f, transform.position.z + point.y), .35f, ~(1 << 6))) {
+                point = Random.insideUnitCircle.normalized * 2;
+            }
             go.transform.DOJump(new Vector3(transform.position.x + point.x, .25f, transform.position.z + point.y), 1, 1, 1.5f);
         });
     }

@@ -18,7 +18,7 @@ public class Minotaur : MonoBehaviour {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
-        player = GameController.instance.GetPlayer();
+        player = GameManager.instance.GetPlayer();
         agent.enabled = true;
         coroutine = StartCoroutine(ChooseAttack());
     }

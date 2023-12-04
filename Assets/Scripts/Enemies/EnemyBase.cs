@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour {
     }
 
     void Start() {
-        player = GameController.instance.GetPlayer();
+        player = GameManager.instance.GetPlayer();
         pos = gameObject.transform.position;
         hp = health;
     }

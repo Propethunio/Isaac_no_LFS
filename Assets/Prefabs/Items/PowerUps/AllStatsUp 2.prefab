@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4871862494397283202}
   - component: {fileID: -4801041528138878416}
   - component: {fileID: 7576546518248225337}
+  - component: {fileID: 4084509144970515961}
   m_Layer: 3
   m_Name: AllStatsUp 2
   m_TagString: Item
@@ -139,6 +140,18 @@ MonoBehaviour:
   changeAmount: 0.3
   minStatAmount: 1.2
   maxStatAmount: 7.5
+--- !u!114 &4084509144970515961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310961426582006884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820475ad21ea6c94eb1b5b54574f355e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8740392485857851198
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ public class PlayerShooting : MonoBehaviour {
         if(Time.time >= 1f / stats.fireRate + lastShoot) {
             Instantiate(muzzleFlash, firePoint.position, firePoint.rotation, firePoint);
             anim.SetTrigger(SHOOT);
-            SoundManager.instance.PlaySound(SoundManager.instance.shoot);
+            SoundManager.instance.PlaySound(SoundManager.instance.shoot, .1f);
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bulletScript = bullet.GetComponent<Bullet>();
             bulletScript.range = stats.fireRange;

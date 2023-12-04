@@ -40,7 +40,7 @@ public class Door : MonoBehaviour {
                     pos = room.rightSpawn.position;
                     break;
             }
-            StartCoroutine(GameController.instance.PlayerEneterNewRoom(room, pos));
+            StartCoroutine(GameManager.instance.PlayerEneterNewRoom(room, pos));
         }
     }
 
@@ -102,7 +102,7 @@ public class Door : MonoBehaviour {
 
     public void TryUnlockDoor() {
         if(isLocked && !room.DoesHaveEnemies()) {
-            PlayerStats stats = GameController.instance.GetPlayer().GetComponent<PlayerStats>();
+            PlayerStats stats = GameManager.instance.GetPlayer().GetComponent<PlayerStats>();
             if(stats.keysAmount >= unlockCost) {
                 stats.keysAmount -= unlockCost;
                 ItemsUIController.instance.SetKeys(stats.keysAmount);

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class RoomInfo {
     public string name;
@@ -17,8 +16,8 @@ public class RoomController : MonoBehaviour {
     [SerializeField] NavMeshSurface surface;
 
     [HideInInspector] public Room currentRoom;
+    [HideInInspector] public List<Room> loadedRooms = new List<Room>();
 
-    List<Room> loadedRooms = new List<Room>();
     string currentWorldName = "Basement";
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
     RoomInfo currentLoadRoomData;
@@ -39,8 +38,8 @@ public class RoomController : MonoBehaviour {
         foreach(Room room in loadedRooms) {
             room.RemoveUnconnectedDoors();
         }
-        currentRoom = FindRoom(0, 0);
         surface.BuildNavMesh();
+        currentRoom = FindRoom(0, 0);
     }
 
     IEnumerator LoadRoomRoutine(RoomInfo info) {
