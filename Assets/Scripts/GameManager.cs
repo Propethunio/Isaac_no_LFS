@@ -56,13 +56,14 @@ public class GameManager : MonoBehaviour {
     }
 
     void EndGame() {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         StatisticManager.instance.SetStats();
         endGamePanel.SetActive(true);
         SoundManager.instance.ChangeMusic(SoundManager.instance.endMusic);
     }
 
     public void BackToMenu() {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuScene);
     }
 }
