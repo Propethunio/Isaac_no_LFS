@@ -40,12 +40,19 @@ public class Chest : MonoBehaviour {
         modelsToHide.ForEach(model => { model.SetActive(false); });
         List<GameObject> rewardPrefabs = RewardController.instance.CheckForChestReward(chestRewardType);
         rewardPrefabs.ForEach(prefab => {
-            GameObject go = Instantiate(prefab, new Vector3(transform.position.x, .25f, transform.position.z), prefab.transform.rotation);
+            int tries = 0;
             Vector2 point = Random.insideUnitCircle.normalized * 2;
             while(Physics.CheckSphere(new Vector3(transform.position.x + point.x, .25f, transform.position.z + point.y), .35f, ~(1 << 6))) {
                 point = Random.insideUnitCircle.normalized * 2;
+                tries++;
+                if(tries > 100) {
+                    break;
+                }
             }
-            go.transform.DOJump(new Vector3(transform.position.x + point.x, .25f, transform.position.z + point.y), 1, 1, 1.5f);
+            if(tries <= 100) {
+                GameObject go = Instantiate(prefab, new Vector3(transform.position.x, .25f, transform.position.z), prefab.transform.rotation);
+                go.transform.DOJump(new Vector3(transform.position.x + point.x, .25f, transform.position.z + point.y), 1, 1, 1.5f);
+            }
         });
     }
 }
